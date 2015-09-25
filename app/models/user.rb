@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+	#metodo de criação de senha segura
+	has_secure_password 
 
 	validates_presence_of :email, :full_name, :location, :password
 	validates_confirmation_of :password
